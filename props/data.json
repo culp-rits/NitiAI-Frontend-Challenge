@@ -1,0 +1,31 @@
+{
+    "urls": [
+        {
+            "url": "./props/images/mission-impossible-fallout-movie-poster-md.jpg"
+        },
+        {
+            "url": "./props/images/spider-man-into-the-spider-verse-movie-poster-md.jpg"
+        },
+        {
+            "url": "./props/images/fantastic-beasts-the-crimes-of-grindelwald-movie-poster-md.jpg"
+        },
+        {
+            "url": "./props/images/deadpool-2-movie-poster-md.jpg"
+        },
+        {
+            "url": "./props/images/ready-player-one-theatrical-movie-poster-md.jpg"
+        },
+        {
+            "url": "./props/images/bohemian-rhapsody-movie-poster-md.jpg"
+        },
+        {
+            "url": "./props/images/creed-ii-movie-poster-md.jpg"
+        },
+        {
+            "url": "./props/images/venom-movie-poster-md.jpg"
+        },
+        {
+            "url": "./props/images/aquaman-movie-poster-md.jpg"
+        }
+    ]
+}
