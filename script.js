@@ -24,43 +24,64 @@ const reflectChange = () => {
         radioIcons[0].style.color="red"
         radioIcons[1].style.color="white"
         radioIcons[2].style.color="white"
-        arrowIcons[0].style.display = "none"
-        arrowIcons[1].style.display = "block"
+        if(window.innerWidth>=1000) {
+            arrowIcons[0].style.display = "none"
+            arrowIcons[1].style.display = "block"
+        }
+        else {
+            arrowIcons[0].style.display = "block"
+            arrowIcons[1].style.display = "block"
+        }
+        
     }
     else if(curr==2) {
         radioIcons[0].style.color="white"
         radioIcons[1].style.color="red"
         radioIcons[2].style.color="white"  
-        arrowIcons[0].style.display = "block"
-        arrowIcons[1].style.display = "block"
+        if(window.innerWidth>=1000) {
+            arrowIcons[0].style.display = "block"
+            arrowIcons[1].style.display = "block"
+        }
+        else {
+            arrowIcons[0].style.display = "block"
+            arrowIcons[1].style.display = "block"
+        }
     }
     else {
         radioIcons[0].style.color="white"
         radioIcons[1].style.color="white"
-        radioIcons[2].style.color="red"  
-        arrowIcons[0].style.display = "block"
-        arrowIcons[1].style.display = "none"
+        radioIcons[2].style.color="red"
+        if(window.innerWidth>=1000) {
+            arrowIcons[0].style.display = "block"
+            arrowIcons[1].style.display = "none"
+        }
+        else {
+            arrowIcons[0].style.display = "block"
+            arrowIcons[1].style.display = "block"
+        }
     }
 }
 
 arrowIcons.forEach(icon => {
     icon.addEventListener("click", () => {
         if(icon.id=="left") {
-            if(window.innerWidth>=1000)
+            if(window.innerWidth>=1000) {
                 carousel.scrollLeft+=(-950)
+                if(curr>0)
+                    curr-=1
+            }
             else
                 carousel.scrollLeft+=(-317)
-            if(curr>0)
-                curr-=1
             reflectChange()
         }
         else {
-            if(window.innerWidth>=1000)
+            if(window.innerWidth>=1000) {
+                if(curr<3)
+                    curr+=1
                 carousel.scrollLeft+=(950)
+            }
             else
                 carousel.scrollLeft+=(317)
-            if(curr<3)
-                curr+=1
             reflectChange()
         }
     })
